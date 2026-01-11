@@ -1,0 +1,246 @@
+/* PAGE */
+.page {
+  min-height: 100vh;
+  padding: clamp(16px, 4vw, 40px);
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+/* GLASS CARD */
+.card {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* TITLE */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+/* TWO COLUMN LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* LEFT */
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.input {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #60a5fa;
+}
+
+/* BUTTON */
+.button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+/* RIGHT — PREFERENCES */
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.pref-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.pref-input {
+  width: 120px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+}
+
+/* RESULT */
+.result-card.compact {
+  margin-top: 18px;
+  padding: 16px;
+}
+.result-card {
+  margin-top: 28px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.highlight {
+  color: #93c5fd;
+}
+
+.code {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* RISK COLORS */
+.risk.low {
+  color: #4ade80;
+}
+
+.risk.medium {
+  color: #fb923c;
+}
+
+.risk.high {
+  color: #f87171;
+}
+
+.explanation {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ===== PROBABILITY CHART ===== */
+
+.chart {
+  margin-top: 14px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.bar-label {
+  width: 80px;
+  opacity: 0.9;
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+}
+/* PROBABILITY COLORS BY CONFIDENCE */
+.bar-high {
+  background: linear-gradient(90deg, #22c55e, #16a34a); /* green */
+}
+
+.bar-medium {
+  background: linear-gradient(90deg, #fb923c, #f97316); /* orange */
+}
+
+.bar-low {
+  background: linear-gradient(90deg, #f87171, #dc2626); /* red */
+}
+
+/* COLOR VARIANTS */
+.color-0 { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
+.color-1 { background: linear-gradient(90deg, #34d399, #10b981); }
+.color-2 { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+.color-3 { background: linear-gradient(90deg, #fb7185, #e11d48); }
+.color-4 { background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+
+.bar-value {
+  width: 50px;
+  text-align: right;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* RISK ROW — INLINE ALIGNMENT */
+.risk-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+/* INLINE TOGGLE BUTTON */
+.toggle-btn.inline {
+  margin-top: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.toggle-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* RESPONSIVE — STACK ON SMALL SCREENS */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
